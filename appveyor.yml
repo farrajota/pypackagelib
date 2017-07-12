@@ -120,18 +120,18 @@ after_test:
   - ECHO "BUILDING CONDA PACKAGE..."
   - set BK_PATH=%PATH%
 
-  # try conda thing
-  - SET PATH=%CONDA%;%CONDA%/Scripts;%CONDA%/Library/bin;%PATH%
-
-  # Update to a known good conda, found from https://github.com/numba/numba/blob/master/appveyor.yml
-  #- cmd: conda install -q -y conda=4.3.14
-  #- cmd: conda install conda-build
-  - cmd: conda install -q -y anaconda-client wheel six
-  - cmd: conda build conda-recipe -q --no-anaconda-upload
-  - ps: ls $env:CONDA_BUILDS
-  #- ps: mv $env:CONDA_BUILDS ./
-  - ps: rm dist/*.egg
-  - SET PATH=%BK_PATH%
+  # # try conda thing
+  # - SET PATH=%CONDA%;%CONDA%/Scripts;%CONDA%/Library/bin;%PATH%
+  #
+  # # Update to a known good conda, found from https://github.com/numba/numba/blob/master/appveyor.yml
+  # #- cmd: conda install -q -y conda=4.3.14
+  # #- cmd: conda install conda-build
+  # - cmd: conda install -q -y anaconda-client wheel six
+  # - cmd: conda build conda-recipe -q --no-anaconda-upload
+  # - ps: ls $env:CONDA_BUILDS
+  # #- ps: mv $env:CONDA_BUILDS ./
+  # - ps: rm dist/*.egg
+  # - SET PATH=%BK_PATH%
 
 
 artifacts:
