@@ -1,11 +1,5 @@
 package:
   name: pypackagelib
-  version: {{ GIT_DESCRIBE_TAG }}
-
-
-source:
-  number: {{ GIT_DESCRIBE_NUMBER }}
-  git_url: ../
 
 requirements:
   build:
