@@ -51,6 +51,10 @@ script:
     - source activate pypackagelib
     - pytest --cov=pypackagelib pypackagelib/test/
 
+after_success:
+    - ls -lha
+    - bash <(curl -s https://codecov.io/bash)
+
 deploy:
     provider: pypi
     user: farrajota
