@@ -1,0 +1,24 @@
+package:
+  name: pypackagelib
+  version: {{ GIT_DESCRIBE_TAG }}
+
+
+source:
+  number: {{ GIT_DESCRIBE_NUMBER }}
+  git_url: ../
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+
+test:
+  imports:
+    - pypackagelib
+
+about:
+  home: https://github.com/farrajota/pypackagelib
+  license: MIT
