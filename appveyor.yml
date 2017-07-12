@@ -127,7 +127,7 @@ after_test:
   #- cmd: conda install -q -y conda=4.3.14
   #- cmd: conda install conda-build
   - cmd: conda install -q -y anaconda-client wheel six
-  - cmd: conda build conda-build -q --no-anaconda-upload
+  - cmd: conda build conda-recipe -q --no-anaconda-upload
   - ps: ls $env:CONDA_BUILDS
   #- ps: mv $env:CONDA_BUILDS ./
   - ps: rm dist/*.egg
